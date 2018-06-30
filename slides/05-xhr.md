@@ -24,6 +24,8 @@ it('starts with zero items', () => {
 
 ## Problem
 
+@ul
+
 - page loads
 - web application makes XHR call `GET /todos`
   - meanwhile it shows an empty list of todos
@@ -31,6 +33,8 @@ it('starts with zero items', () => {
 - `GET /todos` returns with 2 items
   - they are added to the DOM
   - but the test has already finished
+
+@ulend
 
 +++
 
@@ -52,12 +56,16 @@ it('starts with zero items', () => {
 
 **better** to wait on a specific XHR request
 
+@ul
+
 - start Cypress mock server with `cy.server`
   - should we start mock server _before_ or _after_ `cy.visit`?
 - spy on specific route with `cy.route`
 - save as an alias
 - wait on the XHR alias
   - then check the DOM
+
+@ulend
 
 +++
 
