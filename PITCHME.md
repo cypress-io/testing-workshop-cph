@@ -6,9 +6,9 @@ This end-to-end testing with [Cypress.io](https://cypress.io) workshop at Copenh
 
 +++
 
-Repo: [cypress-io/testing-workshop-cph](https://github.com/cypress-io/testing-workshop-cph)
+@fa[github] [cypress-io/testing-workshop-cph](https://github.com/cypress-io/testing-workshop-cph)
 
-Slides: [https://gitpitch.com/cypress-io/testing-workshop-cph](https://gitpitch.com/cypress-io/testing-workshop-cph)
+📽 [https://gitpitch.com/cypress-io/testing-workshop-cph](https://gitpitch.com/cypress-io/testing-workshop-cph)
 
 ---?include=slides/intro.md
 

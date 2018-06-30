@@ -1,3 +1,5 @@
+@title[Intro]
+
 # Gleb Bahmutov, PhD
 
 ## VP of Engineering, Cypress
@@ -16,17 +18,15 @@ As long as ⏳ permits
 - example TodoMVC
   - web app, data store, REST calls
 - basic page load test
-- selector playground
-- resetting state
+- resetting application state
 - XHR spying and stubbing, fixtures
-- setting up CI and Cypress dashboard
 
 +++
 
 ## Time 🕰
 
-- total workshop duration 3 hours
-- short breaks after 1 hour and 2 hours
+- total workshop duration 2 hours
+- short breaks after 1 hour
 
 +++
 
@@ -77,12 +77,6 @@ Let us look at the application.
 It is a regular TodoMVC application.
 
 ![TodoMVC](todomvc/img/todomvc.png)
-
-+++
-
-If you have Vue DevTools plugin
-
-![With Vue DevTools](todomvc/img/vue-devtools.png)
 
 +++
 
