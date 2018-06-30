@@ -24,10 +24,6 @@ This end-to-end testing with [Cypress.io](https://cypress.io) workshop at Copenh
 
 ---?include=slides/06-app-data-store.md
 
----?include=slides/end.md
-
-<!--
----?include=slides/03-selector-playground.md
 ---?include=slides/07-ci.md
----?include=slides/08-dashboard.md
---->
+
+---?include=slides/end.md
