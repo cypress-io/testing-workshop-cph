@@ -1,4 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "standard.autoFixOnSave": true
+  "standard.autoFixOnSave": true,
+  "prettier.disableLanguages": ["markdown"]
 }

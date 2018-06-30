@@ -1,8 +1,14 @@
-# End-to-end testing with [Cypress.io](https://cypress.io)
+---?image=img/cypress-cph-workshop.jpeg
 
-Repo: [cypress-io/testing-workshop-cypress](https://github.com/cypress-io/testing-workshop-cypress)
+Note:
 
-Slides: [https://gitpitch.com/cypress-io/testing-workshop-cypress](https://gitpitch.com/cypress-io/testing-workshop-cypress)
+This end-to-end testing with [Cypress.io](https://cypress.io) workshop at CopenhagenJS.
+
++++
+
+Repo: [cypress-io/testing-workshop-cph](https://github.com/cypress-io/testing-workshop-cph)
+
+Slides: [https://gitpitch.com/cypress-io/testing-workshop-cph](https://gitpitch.com/cypress-io/testing-workshop-cph)
 
 ---?include=slides/intro.md
 

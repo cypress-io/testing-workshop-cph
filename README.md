@@ -1,6 +1,6 @@
-# testing-workshop-cypress [![CircleCI][ci-badge]][ci-url] [![renovate-app badge][renovate-badge]][renovate-app]
+# testing-workshop-cph [![CircleCI][ci-badge]][ci-url]
 
-> A 3-4 hour testing workshop complete with application, exercise tests and speaker slides for [Cypress.io](https://www.cypress.io/)
+> End-to-end testing workshop with [Cypress.io](https://www.cypress.io/) at CopenhagenJS
 
 ## Requirements
 
@@ -14,9 +14,9 @@
 
 ## Slides
 
-[https://gitpitch.com/cypress-io/testing-workshop-cypress][presentation] with the starting file in [PITCHME.md](PITCHME.md) presented using [GitPitch](https://gitpitch.com/). The pitch file includes files from the [slides](slides) folder. Students should open the [presentation slides][presentation] and follow along.
+[https://gitpitch.com/cypress-io/testing-workshop-cph][presentation] with the starting file in [PITCHME.md](PITCHME.md) presented using [GitPitch](https://gitpitch.com/). The pitch file includes files from the [slides](slides) folder. Students should open the [presentation slides][presentation] and follow along.
 
-[presentation]: https://gitpitch.com/cypress-io/testing-workshop-cypress
+[presentation]: https://gitpitch.com/cypress-io/testing-workshop-cph
 
 ## Content
 
@@ -51,7 +51,5 @@ npm run cy:open
 
 The slides can be shown directly via the [presentation link][presentation] above. The Markdown files in [slides](slides) folder also has a little bit of speaker notes.
 
-[ci-badge]: https://circleci.com/gh/cypress-io/testing-workshop-cypress.svg?style=svg
-[ci-url]: https://circleci.com/gh/cypress-io/testing-workshop-cypress
-[renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
-[renovate-app]: https://renovateapp.com/
+[ci-badge]: https://circleci.com/gh/cypress-io/testing-workshop-cph.svg?style=svg
+[ci-url]: https://circleci.com/gh/cypress-io/testing-workshop-cph

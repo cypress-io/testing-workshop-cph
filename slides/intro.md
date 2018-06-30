@@ -56,7 +56,7 @@ You will need:
 
 ```text
 git clone <repo url>
-cd testing-workshop-cypress
+cd testing-workshop-cph
 npm install
 ```
 

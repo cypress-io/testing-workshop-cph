@@ -1,7 +1,7 @@
 {
   "name": "testing-workshop-cph",
   "version": "1.0.0",
-  "description": "A 3-4 hour testing workshop complete with application, exercise tests and speaker slides",
+  "description": "End-to-end testing workshop with Cypress at CopenhagenJS",
   "main": "index.js",
   "scripts": {
     "test": "cypress run --spec 'cypress/integration/07-ci/*'",
