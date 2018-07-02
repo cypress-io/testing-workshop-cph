@@ -30,20 +30,7 @@ As long as ⏳ permits
 
 +++
 
-## Repo organization
-
-- `/todomvc` is a web application we are going to test
-- all tests are in `cypress/integration` folder
-  - there are subfolders for exercises
-    - `01-basic`
-    - `02-adding-items`
-    - `03-selector-playground`
-    - `04-reset-state`
-    - etc
-- keep application `todomvc` running!
-
-Note:
-We are going to keep the app running, while switching from spec to spec for each part.
+Please: if you have experience with Cypress.io, help others during the workshop 🙏
 
 +++
 
@@ -59,6 +46,23 @@ git clone <repo url>
 cd testing-workshop-cph
 npm install
 ```
+
++++
+
+## Repo organization
+
+- `/todomvc` is a web application we are going to test
+- all tests are in `cypress/integration` folder
+  - there are subfolders for exercises
+    - `01-basic`
+    - `02-adding-items`
+    - `03-selector-playground`
+    - `04-reset-state`
+    - etc
+- keep application `todomvc` running!
+
+Note:
+We are going to keep the app running, while switching from spec to spec for each part.
 
 +++
 
