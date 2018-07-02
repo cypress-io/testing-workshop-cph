@@ -96,7 +96,7 @@ cy.route('GET', '/todos', [])
 
 +++
 
-## Todo for spec "05-xhr/spec.js" "fixtures" suite
+### Todo for spec "05-xhr/spec.js" "fixtures" suite
 
 - read about [`cy.fixture`](http://on.cypress.io/fixture) command
 - mock `GET /todos` route using data loaded from a fixture
@@ -105,7 +105,7 @@ cy.route('GET', '/todos', [])
 
 +++
 
-## Spying on adding an item XHR
+### Spying on adding an item XHR
 
 When you add an item through the DOM, the app makes `POST` XHR call.
 
@@ -113,7 +113,7 @@ When you add an item through the DOM, the app makes `POST` XHR call.
 
 +++
 
-## Todo 1/2
+### Todo 1/2
 
 - write a test that confirms that new item is posted to the server
 
@@ -121,7 +121,7 @@ When you add an item through the DOM, the app makes `POST` XHR call.
 
 +++
 
-## Todo 2/2
+### Todo 2/2
 
 - write a test that confirms that RESPONSE when a new item is posted to the server
 
