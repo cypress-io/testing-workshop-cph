@@ -21,6 +21,9 @@ it('starts with zero items', () => {
   //  using "@<alias name>" string
   // then check the DOM
   cy.get('li.todo').should('have.length', 0)
+
+  // second part: when spying on the XHR using an alias
+  // confirm that the response was an empty list
 })
 
 it('starts with zero items (stubbed response)', () => {
@@ -36,15 +39,26 @@ it('starts with zero items (stubbed response)', () => {
   // and make sure the body is an empty list
 })
 
-it('starts with zero items (fixture)', () => {
-  // start Cypress network server
-  // stub `GET /todos` with fixture "empty-list"
+describe('fixtures', () => {
+  it('starts with zero items (fixture)', () => {
+    // start Cypress network server
+    // stub `GET /todos` with fixture "empty-list"
 
-  // visit the page
-  cy.visit('/')
+    // visit the page
+    cy.visit('/')
 
-  // then check the DOM
-  cy.get('li.todo').should('have.length', 0)
+    // then check the DOM
+    cy.get('li.todo').should('have.length', 0)
+  })
+
+  it('loads several items from a fixture', () => {
+    // start Cypress network server
+    // stub route `GET /todos` with data from a fixture file "two-items.json"
+    // THEN visit the page
+    cy.visit('/')
+    // then check the DOM: some items should be marked completed
+    // we can do this in a variety of ways
+  })
 })
 
 it('posts new item to the server', () => {
@@ -57,13 +71,4 @@ it('posts new item to the server', () => {
   // and make sure it contains
   // {title: 'test api', completed: false}
   // hint: use cy.wait(...).its(...).should('have.contain', ...)
-})
-
-it('loads several items from a fixture', () => {
-  // start Cypress network server
-  // stub route `GET /todos` with data from a fixture file "two-items.json"
-  // THEN visit the page
-  cy.visit('/')
-  // then check the DOM: some items should be marked completed
-  // we can do this in a variety of ways
 })

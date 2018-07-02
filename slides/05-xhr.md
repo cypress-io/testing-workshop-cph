@@ -54,7 +54,7 @@ it('starts with zero items', () => {
 
 ## Todo
 
-**better** to wait on a specific XHR request
+**better** to wait on a specific XHR request. In test "starts with zero items" from `05-xhr/spec.js`
 
 @ul
 
@@ -67,19 +67,15 @@ it('starts with zero items', () => {
 
 @ulend
 
-+++
-
-## Tips
-
-- [`cy.server`](https://on.cypress.io/server)
-- [`cy.route`]('https://on.cypress.io/route)
-- [Network requests guide](https://on.cypress.io/network-requests)
+**tips:** [`cy.server`](https://on.cypress.io/server), [`cy.route`]('https://on.cypress.io/route), [Network requests guide](https://on.cypress.io/network-requests)
 
 +++
 
 ## Todo
 
-- wait for the XHR alias
+add to test "starts with zero items":
+
+- wait for the XHR alias like before
 - its response body should be an empty array
 
 ![Checking response body](img/response-body.png)
@@ -87,6 +83,8 @@ it('starts with zero items', () => {
 +++
 
 ## Stub network call
+
+Update test "starts with zero items (stubbed response)"
 
 - instead of just spying on XHR call, let's return some mock data
 
@@ -98,7 +96,7 @@ cy.route('GET', '/todos', [])
 
 +++
 
-## Questions
+## Todo for spec "05-xhr/spec.js" "fixtures" suite
 
 - read about [`cy.fixture`](http://on.cypress.io/fixture) command
 - mock `GET /todos` route using data loaded from a fixture
