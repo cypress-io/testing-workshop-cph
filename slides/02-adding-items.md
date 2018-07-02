@@ -47,9 +47,16 @@ Move `addItem` function into a separate file and import from the spec file. It i
 
 +++
 
-## Bonus
+## What kind of tests?
 
-Unit tests vs end-to-end tests
+- discussion: what would you test in the TodoMVC app?
+
+Note:
+Longer tests, adding items then deleting one for example. Adding items via GUI and observing communication with the server. Adding items then reloading the page.
+
++++
+
+## Unit tests vs end-to-end tests
 
 ### Unit tests
 
@@ -67,27 +74,27 @@ test('add', () => {
 ### End-to-end tests
 
 ```javascript
-it('adds two and deletes first', () => {
-  enterTodo('first item')
-  enterTodo('second item')
-
-  getTodoItems()
-    .contains('first item')
-    .parent()
-    .find('.destroy')
-    // because it only becomes visible on hover
-    .click({ force: true })
-
-  cy.contains('first item').should('not.exist')
-  cy.contains('second item').should('exist')
-  getTodoItems().should('have.length', 1)
+const addItem = text => {
+  cy.get('.new-todo').type(`${text}{enter}`)
+}
+it('can mark items as completed', () => {
+  const ITEM_SELECTOR = 'li.todo'
+  addItem('simple')
+  addItem('difficult')
+  cy.contains(ITEM_SELECTOR, 'simple').should('exist')
+    .find('input[type="checkbox"]').check()
+  // have to force click because the button does not appear unless we hover
+  cy.contains(ITEM_SELECTOR, 'simple').find('.destroy').click({ force: true })
+  cy.contains(ITEM_SELECTOR, 'simple').should('not.exist')
+  cy.get(ITEM_SELECTOR).should('have.length', 1)
+  cy.contains(ITEM_SELECTOR, 'difficult').should('be.visible')
 })
 ```
 
 - **tip** check out `cy.pause` command
 
 Note:
-Revisit the discussion about what kind of tests one should write. E2E tests can cover a lot of features in a single test, and that is a recommended practice. If a test fails, it is easy to debug it, and see how the application looks during each step.
+Revisit the discussion about what kind of tests one should write. E2E tests can cover a lot of features in a single test, and that is a recommended practice. If a test fails, it is easy to debug it, and see how the application looks during each step. This is a good moment to show how Cypress stores DOM snapshots and shows them for each step.
 
 +++
 

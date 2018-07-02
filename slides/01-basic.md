@@ -18,30 +18,15 @@ it('loads', () => {
 
 ![Fails to find text](img/fails-to-find-text.png)
 
-Note:
-This is a good moment to show how Cypress stores DOM snapshots and shows them for each step.
-
 +++
 
 ## Questions 1/3
 
-- what happens when you execute `npm run cy:run` or `npx cypress run`?
+- what happens when you execute `npm run basic`?
+- same as `npx cypress run --spec 'cypress/integration/01-basic/spec.js'`
 
-+++
-
-## Questions 2/3
-
-- where are the docs for `cy.contains` command?
-- why is the command failing?
-  - **hint**: use DevTools
-- can you fix this?
-
-+++
-
-## Questions 3/3
-
-- do you see the command retrying (blue spinner)?
-- use `timeout` option to force the command to try for longer
+Note:
+You should see single spec running, and on failure it should save a screenshot, and there should also be a video of the test run.
 
 +++
 
@@ -52,9 +37,22 @@ This is a good moment to show how Cypress stores DOM snapshots and shows them fo
 
 +++
 
-## What kind of tests?
+## Questions 2/3
 
-- discussion: what would you test in the TodoMVC app?
+- where are the docs for `cy.contains` command?
+- why is the command failing?
+  - **hint**: use DevTools
+- can you fix this?
 
 Note:
-Longer tests, adding items then deleting one for example. Adding items via GUI and observing communication with the server. Adding items then reloading the page.
+The text is actually split across two different nodes, thus it fails to find a single node with the text content.
+
++++
+
+## Questions 3/3
+
+- do you see the command retrying (blue spinner)?
+- use `timeout` option to force the command to try for longer
+
+Note:
+This is to stress the point that Cypress retries last command as long as the assertion keeps failing.
