@@ -1,9 +1,6 @@
-# Gleb Bahmutov, PhD
+## Gleb Bahmutov, PhD
 
-## VP of Engineering, Cypress
-
-## contact
-
+- VP of Engineering, Cypress
 - gleb (at) cypress.io
 - [@bahmutov](https://twitter.com/bahmutov)
 
