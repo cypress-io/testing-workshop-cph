@@ -24,6 +24,9 @@
 - how does a new item get its id?
 - can you override random id generator from DevTools?
 
+Note:
+It should be enough to do `window.Math.random = () => '0.1'` to have a single todo item get id "1"
+
 +++
 
 ## Iframed contexts
@@ -40,6 +43,7 @@
 
 ## Stub application's random generator
 
+- test "creates an item with id 1" in `06-app-data-store/spec.js`
 - get the application's context using `cy.window`
 - get application's `window.Math` object
 - can you stub application's random generator?
@@ -49,9 +53,10 @@
 
 ## Confirm spy's behavior
 
-- write a test that adds 2 items
+- test "creates an item with id using a stub"
+- write a test that adds 1 item
 - name spy with an alias `cy.spy(...).as('name')`
-- get the spy using the alias and confirm it was called twice
+- get the spy using the alias and confirm it was called once
 
 +++
 
@@ -60,6 +65,9 @@
 - inspect in DevTools 'window.app' variable
 - can you find the items in the data store as they are added?
   - **hint** you might need 'JSON.parse(JSON.stringify(...))' to get a "simple" object
+
+Note:
+Our goal is to show that anything one can do from the DevTools can be done from the end-to-end tests using `cy.window` to get to the application's window. Application code can even expose some objects during testing using `if (window.Cypress) ...` conditions.
 
 +++
 

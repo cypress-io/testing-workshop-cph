@@ -111,6 +111,9 @@ When you add an item through the DOM, the app makes `POST` XHR call.
 
 ![Post new item](img/post-item.png)
 
+Note:
+It is important to be able to use DevTools network tab to inspect the XHR and its request and response.
+
 +++
 
 **Todo 1/2**
@@ -119,6 +122,9 @@ When you add an item through the DOM, the app makes `POST` XHR call.
 
 ![Post new item](img/post-item.png)
 
+Note:
+see instructions in the `05-xhr/spec.js` for the test
+
 +++
 
 **Todo 2/2**
@@ -126,6 +132,9 @@ When you add an item through the DOM, the app makes `POST` XHR call.
 - write a test "posts new item to the server response" that confirms that RESPONSE when a new item is posted to the server
 
 ![Post new item response](img/post-item-response.png)
+
+Note:
+see instructions in the `05-xhr/spec.js` for the test
 
 +++
 

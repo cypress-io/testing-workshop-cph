@@ -35,6 +35,11 @@ it('creates an item with id 1', () => {
   })
 })
 
+it('creates an item with id using a stub', () => {
+  addItem('something')
+  cy.get('@random').should('have.been.calledOnce')
+})
+
 it('calls spy twice', () => {
   addItem('something')
   addItem('else')
