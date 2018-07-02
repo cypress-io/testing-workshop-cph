@@ -1,5 +1,3 @@
-@title[Intro]
-
 # Gleb Bahmutov, PhD
 
 ## VP of Engineering, Cypress
