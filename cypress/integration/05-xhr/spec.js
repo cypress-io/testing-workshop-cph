@@ -72,3 +72,13 @@ it('posts new item to the server', () => {
   // {title: 'test api', completed: false}
   // hint: use cy.wait(...).its(...).should('have.contain', ...)
 })
+
+it('posts new item to the server response', () => {
+  // start Cypress network server
+  // spy on "POST /todos", save as alias
+  cy.visit('/')
+  cy.get('.new-todo').type('test api{enter}')
+
+  // wait on XHR call using its alias, grab its response body
+  // and it should contain the title and the completed "false" object
+})

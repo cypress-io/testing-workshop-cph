@@ -56,17 +56,6 @@ describe('fixtures', () => {
     cy.get('li.todo').should('have.length', 0)
   })
 
-  it('posts new item to the server', () => {
-    cy.server()
-    cy.route('POST', '/todos').as('new-item')
-    cy.visit('/')
-    cy.get('.new-todo').type('test api{enter}')
-    cy.wait('@new-item').its('request.body').should('have.contain', {
-      title: 'test api',
-      completed: false
-    })
-  })
-
   it('loads several items from a fixture', () => {
     // start Cypress network server
     // stub route `GET /todos` with data from a fixture file
@@ -87,6 +76,17 @@ describe('fixtures', () => {
       .contains('.todo.completed', 'second item from fixture')
       .find('.toggle')
       .should('be.checked')
+  })
+})
+
+it('posts new item to the server', () => {
+  cy.server()
+  cy.route('POST', '/todos').as('new-item')
+  cy.visit('/')
+  cy.get('.new-todo').type('test api{enter}')
+  cy.wait('@new-item').its('request.body').should('have.contain', {
+    title: 'test api',
+    completed: false
   })
 })
 

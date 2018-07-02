@@ -113,17 +113,17 @@ When you add an item through the DOM, the app makes `POST` XHR call.
 
 +++
 
-### Todo 1/2
+**Todo 1/2**
 
-- write a test that confirms that new item is posted to the server
+- write a test "posts new item to the server" that confirms that new item is posted to the server
 
 ![Post new item](img/post-item.png)
 
 +++
 
-### Todo 2/2
+**Todo 2/2**
 
-- write a test that confirms that RESPONSE when a new item is posted to the server
+- write a test "posts new item to the server response" that confirms that RESPONSE when a new item is posted to the server
 
 ![Post new item response](img/post-item-response.png)
 
