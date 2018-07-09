@@ -7,13 +7,16 @@
 
 ```js
 it.only('starts with zero items', () => {
-  // TODO check if the list is empty initially
-  // find the selector for the individual TODO items in the list
-  // use cy.get(...) and it should have length of 0
+  // check if the list is empty initially
+  //  find the selector for the individual TODO items
+  //  in the list
+  //  use cy.get(...) and it should have length of 0
 })
 ```
 
 **tip** use `cy.get`, `should('have.length', ...)`
+
+[https://on.cypress.io/get](https://on.cypress.io/get)
 
 +++
 
