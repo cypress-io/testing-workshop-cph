@@ -1,4 +1,4 @@
----?image=img/cypress-cph-workshop.jpeg
+---?image=img/room-caption.jpg
 
 Note:
 
