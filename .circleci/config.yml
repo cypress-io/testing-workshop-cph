@@ -76,6 +76,11 @@ jobs:
           name: Install dependencies
           command: npm ci
 
+      - run:
+          name: Install TodoMVC dependencies
+          command: npm ci
+          working_directory: todomvc
+
       - save_cache:
           paths:
             # all NPM modules
