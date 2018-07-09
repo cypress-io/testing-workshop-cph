@@ -12,6 +12,74 @@ it('loads', () => {
 })
 ```
 
+Note:
+The test fails on purpose, this is to show what happens during `cypress run` and how it takes a screenshot on failure and a video of the test run.
+
++++
+
+```javascript
+/// <reference types="cypress" />
+it('loads', () => {
+  cy.visit('localhost:3000')
+  cy.contains('Part of TodoMVC')
+})
+```
+
+- why do we need `reference types ...` line?
+
+Note:
+By having "reference" line we tell editors that support it (VSCode, WebStorm) to use TypeScript definitions included in Cypress to provide intelligent code completion. Hovering over any `cy` command brings helpful tooltips. It is a good idea to show intellisense over each command
+
++++
+
+Using `ts-check`
+
+```javascript
+/// <reference types="cypress" />
+// @ts-check
+it('loads', () => {
+  cy.visit('localhost:3000')
+  cy.contains('Part of TodoMVC')
+})
+```
+
+- what happens if you add `ts-check` line and misspell `cy.visit`?
+
+Note:
+The check works really well in VSCode editor. I am not sure how well other editors support Cypress type checks right out of the box.
+
+## Docs
+
+Your best friend is [https://docs.cypress.io/](https://docs.cypress.io/)
+
+![Doc search](img/docs-search.png)
+
++++
+
+### Questions (find each doc)
+
+- Cypress main features and how it works docs
+- core concepts
+- command API
+  - how many commands are there?
+
+Note:
+The most important take away from this workshop is for students to know where to find help later. Docs is the primary place, with GitHub issues and Gitter chat channel following it.
+
++++
+
+### Find these 🔎
+
+- examples
+  - recipes
+  - tutorial videos
+  - example applications
+  - blogs
+- Cypress changelog
+
+Note:
+Students should know where to find information later on. Main resources is the api page [https://on.cypress.io/api](https://on.cypress.io/api)
+
 +++
 
 `cy.contains('Part of TodoMVC')` is not working 😟

@@ -12,8 +12,6 @@ This end-to-end testing with [Cypress.io](https://cypress.io) workshop at Copenh
 
 ---?include=slides/intro.md
 
----?include=slides/00-start.md
-
 ---?include=slides/01-basic.md
 
 ---?include=slides/02-adding-items.md

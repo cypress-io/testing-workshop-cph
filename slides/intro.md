@@ -106,3 +106,21 @@ Look at `todomvc/app.js`
 
 Note:
 The students should open DevTools and look at XHR requests that go between the web application and the server. Also the students should find `todomvc/data.json` file with saved items.
+
++++
+
+```
+npx cypress open
+$(npm bin)/cypress open
+./node_modules/.bin/cypress open
+```
+
+![First time you open Cypress](img/cypress-scaffold.png)
+
++++
+
+- "cypress.json" - all Cypress settings
+- "cypress/integration" - test files (specs)
+- "cypress/fixtures" - mock data
+- "cypress/plugins" - extending Cypress
+- "cypress/support" - shared commands, utilities
