@@ -78,7 +78,7 @@ The most important take away from this workshop is for students to know where to
 - Cypress changelog
 
 Note:
-Students should know where to find information later on. Main resources is the api page [https://on.cypress.io/api](https://on.cypress.io/api)
+Students should know where to find information later on. Main resources is the api page [https://on.cypress.io/api](https://on.cypress.io/api). Also explain the difference between direct links and redirect service like https://on.cypress.io/changelog and https://on.cypress.io/roadmap
 
 +++
 
