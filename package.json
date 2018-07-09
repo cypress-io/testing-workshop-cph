@@ -12,6 +12,7 @@
     "ci": "start-test 3000",
     "basic": "cypress run --spec 'cypress/integration/01-basic/spec.js'",
     "postinstall": "cd todomvc; npm install",
+    "postci": "cd todomvc; npm ci",
     "issues": "git-issues"
   },
   "repository": {
