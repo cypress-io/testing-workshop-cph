@@ -25,7 +25,6 @@ Strike through for topics we are going to skip.
 | topics                                 | folder                                                                                   | slides                                                        |
 | -------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | Introduction, TodoMVC application      | [todomvc](todomvc)                                                                       | [intro.md](slides/intro.md)                                   |
-| Loading page                           | [00-start](00-start)                                                                     | [00-start.md](slides/00-start.md)                             |
 | `cypress open` vs `cypress run`        | [cypress/integration/01-basic](cypress/integration/01-basic)                             | [01-basic.md](slides/01-basic.md)                             |
 | Adding items test, `cypress.json` file | [cypress/integration/02-adding-items](cypress/integration/02-adding-items)               | [02-adding-items.md](slides/02-adding-items.md)               |
 | ~~Selector Playground~~                    | [cypress/integration/03-selector-playground](cypress/integration/03-selector-playground) | [03-selector-playground.md](slides/03-selector-playground.md) |
