@@ -54,7 +54,6 @@ npm install
     - `03-selector-playground`
     - `04-reset-state`
     - etc
-- keep application `todomvc` running!
 
 Note:
 We are going to keep the app running, while switching from spec to spec for each part.
