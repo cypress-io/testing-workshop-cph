@@ -1,12 +1,31 @@
 ## Adding items test
 
 - keep `todomvc` app running
-- open `02-adding-items/spec.js`
-- get the input field
-  - type some text
-  - type special "Enter" key
-  - check that has been added to the list
-  - delete the new item
+- open `02-adding-items/spec.js` in your text editor and Cypress
+
++++
+
+```js
+it.only('starts with zero items', () => {
+  // TODO check if the list is empty initially
+  // find the selector for the individual TODO items in the list
+  // use cy.get(...) and it should have length of 0
+})
+```
+
+**tip** use `cy.get`, `should('have.length', ...)`
+
++++
+
+```js
+it('adds two items', () => {
+  // repeat twice
+  //    get the input field
+  //    type text and "enter"
+  //    assert that the new Todo item
+  //    has been added added to the list
+})
+```
 
 **tip** use `cy.get`, `cy.type`, `cy.contains`, `cy.click`
 
