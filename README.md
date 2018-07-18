@@ -1,12 +1,20 @@
 # testing-workshop-cph [![CircleCI][ci-badge]][ci-url]
 
-> End-to-end testing workshop with [Cypress.io](https://www.cypress.io/) at CopenhagenJS
+> End-to-end testing workshop with [Cypress.io](https://www.cypress.io/) at CopenhagenJS / ngCopenhagen
 
 ## Requirements
 
 - Any computer: Mac, Windows, Linux
 - [Node 6+](https://nodejs.org/)
 - [git](https://git-scm.com)
+
+In order to get the code and install dependencies
+
+```shell
+git clone git@github.com:cypress-io/testing-workshop-cph.git
+cd testing-workshop-cph
+npm install
+```
 
 ## Application
 
@@ -38,15 +46,6 @@ Strike through for topics we are going to skip.
 ## For speakers
 
 During the workshop, keep the `todomvc` app running in one shell, while each section `01-basic`, `02-...`, `03-...` etc. has its own Cypress and specs subfolders `cypress/integration/...`. Usually a spec has several tests with placeholder comments. The workshop attendees are expected to make the tests pass using the knowledge from the slides and hints (and [Cypress documentation](https://docs.cypress.io/)). Note that most folders have a prepared `spec.js` file and an `answer.js` file. The `answer.js` file is ignored by Cypress using a setting in `cypress.json`.
-
-The only exception is the folder `00-start`. This is a folder for students to see how Cypress scaffolds example specs when you open Cypress for the very first time. In this folder students should execute...
-
-```
-cd 00-start
-npm run cy:open
-```
-
-...and see the list of created example specs.
 
 The slides can be shown directly via the [presentation link][presentation] above. The Markdown files in [slides](slides) folder also has a little bit of speaker notes.
 
