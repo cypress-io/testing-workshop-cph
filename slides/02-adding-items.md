@@ -32,6 +32,11 @@ it('adds two items', () => {
 
 **tip** use `cy.get`, `cy.type`, `cy.contains`, `cy.click`
 
+Note:
+Draw distinction between commands and assertions, show how commands can be chained,
+each continues to work with the subject of the previous command. Assertions do
+not change the subject.
+
 +++
 
 ## Refactor code 1/3

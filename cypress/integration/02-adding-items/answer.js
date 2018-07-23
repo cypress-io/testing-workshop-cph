@@ -8,12 +8,20 @@ it('loads', () => {
 })
 
 it('starts with zero items', () => {
-  cy.get('li.todo').should('have.length', 0)
+  cy
+    .get('li.todo') // command
+    .should('have.length', 0) // assertion
 })
 
+// notice how the commands are chained
+// each command continues to act on a previous "element" we call "subject"
 it('adds two items', () => {
-  cy.get('.new-todo').type('first item{enter}')
-  cy.contains('li.todo', 'first item').should('be.visible')
+  cy
+    .get('.new-todo') // command
+    .type('first item{enter}') // command
+  cy
+    .contains('li.todo', 'first item') // command
+    .should('be.visible') // assertion
   cy.get('.new-todo').type('second item{enter}')
   cy.contains('li.todo', 'second item').should('be.visible')
 })
@@ -31,10 +39,10 @@ it('can mark items as completed', () => {
   addItem('difficult')
 
   cy
-    .contains(ITEM_SELECTOR, 'simple')
-    .should('exist')
-    .find('input[type="checkbox"]')
-    .check()
+    .contains(ITEM_SELECTOR, 'simple') // command
+    .should('exist') // assertion
+    .find('input[type="checkbox"]') // command (continues from previous subject)
+    .check() // command
   // have to force click because the button does not appear unless we hover
   cy.contains(ITEM_SELECTOR, 'simple').find('.destroy').click({ force: true })
   cy.contains(ITEM_SELECTOR, 'simple').should('not.exist')

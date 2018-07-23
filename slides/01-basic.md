@@ -82,7 +82,7 @@ Students should know where to find information later on. Main resources is the a
 
 +++
 
-`cy.contains('Part of TodoMVC')` is not working 😟
+`cy.contains('Part of TodoMVC')` is not working on purpose
 
 ![Fails to find text](img/fails-to-find-text.png)
 
@@ -107,10 +107,14 @@ You should see single spec running, and on failure it should save a screenshot, 
 
 ## Questions 2/3
 
+@ul
+
 - where are the docs for `cy.contains` command?
 - why is the command failing?
   - **hint**: use DevTools
 - can you fix this?
+
+@ulend
 
 Note:
 The text is actually split across two different nodes, thus it fails to find a single node with the text content.
