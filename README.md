@@ -2,7 +2,7 @@
 
 > End-to-end testing workshop with [Cypress.io](https://www.cypress.io/) at CopenhagenJS / ngCopenhagen
 
-## Requirements
+## Requirements ⚙️
 
 - Any computer: Mac, Windows, Linux
 - [Node 6+](https://nodejs.org/)
@@ -16,17 +16,17 @@ cd testing-workshop-cph
 npm install
 ```
 
-## Application
+## Application 💾
 
 [Vue.js](https://vuejs.org/) + [Vuex](https://vuex.vuejs.org/) + REST server application that we are going to test is in the folder `todomvc`. This application and its full testing is described in [this blog post](https://www.cypress.io/blog/2017/11/28/testing-vue-web-application-with-vuex-data-store-and-rest-backend/).
 
-## Slides
+## Slides 🖥
 
 [https://gitpitch.com/cypress-io/testing-workshop-cph][presentation] with the starting file in [PITCHME.md](PITCHME.md) presented using [GitPitch](https://gitpitch.com/). The pitch file includes files from the [slides](slides) folder. Students should open the [presentation slides][presentation] and follow along.
 
 [presentation]: https://gitpitch.com/cypress-io/testing-workshop-cph
 
-## Content
+## Content 🗂
 
 Strike through for topics we are going to skip.
 
@@ -43,7 +43,7 @@ Strike through for topics we are going to skip.
 | ~~Setting up Cypress Dashboard~~           | [cypress/integration/07-ci](cypress/integration/07-ci)                                   | [08-dashboard.md](slides/08-dashboard.md)                     |
 | The end                                | -                                                                                        | [end.md](slides/end.md)                                       |
 
-## For speakers
+## For speakers 🎙
 
 During the workshop, keep the `todomvc` app running in one shell, while each section `01-basic`, `02-...`, `03-...` etc. has its own Cypress and specs subfolders `cypress/integration/...`. Usually a spec has several tests with placeholder comments. The workshop attendees are expected to make the tests pass using the knowledge from the slides and hints (and [Cypress documentation](https://docs.cypress.io/)). Note that most folders have a prepared `spec.js` file and an `answer.js` file. The `answer.js` file is ignored by Cypress using a setting in `cypress.json`.
 

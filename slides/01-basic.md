@@ -72,11 +72,11 @@ The most important take away from this workshop is for students to know where to
 
 Jump to docs for any API command with
 
-```
+```text
 https://on.cypress.io/<command name>
 ```
 
-Like `https://on.cypress.io/visit` or `https://on.cypress.io/click`
+Like [https://on.cypress.io/visit](https://on.cypress.io/visit) or [https://on.cypress.io/click](https://on.cypress.io/click)
 
 +++
 
