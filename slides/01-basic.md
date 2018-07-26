@@ -68,6 +68,18 @@ The most important take away from this workshop is for students to know where to
 
 +++
 
+## Power tip
+
+Jump to docs for any API command with
+
+```
+https://on.cypress.io/<command name>
+```
+
+Like `https://on.cypress.io/visit` or `https://on.cypress.io/click`
+
++++
+
 ### Find these 🔎
 
 - examples
