@@ -51,7 +51,7 @@ jobs:
       # execute all specs on a single machine, but give the group a name
       - run:
           name: Run Cypress tests
-          command: npm test -- --group single
+          command: npm test -- --record --group single
 
   # alternative:
   #   starts the app and runs tests using a single start-server-and-test command
