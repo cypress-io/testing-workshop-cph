@@ -1,12 +1,10 @@
 /// <reference types="cypress" />
+// beforeEach(() => {
+//   cy.request('POST', '/reset', {
+//     todos: []
+//   })
+// })
 beforeEach(() => {
-  // make request to the server
-  // POST /reset { todos: [] }
-  // and the "database" will be cleared
-})
-beforeEach(() => {
-  // application should be running at port 3000
-  // and the "localhost:3000" is set as "baseUrl" in "cypress.json"
   cy.visit('/')
 })
 /**

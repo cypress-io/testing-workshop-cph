@@ -1,84 +1,102 @@
 /// <reference types="cypress" />
 // note, we are not resetting the server before each test
-// and we want to confirm that IF the application has items already
-// (for example add them manually using the browser localhost:3000)
-// then these tests fail!
-
+// so this test passes without "wait" - but this is WRONG
 it('starts with zero items (waits)', () => {
   cy.visit('/')
-  // wait 1 second
-  // then check the number of items
+  // cy.wait(1000)
   cy.get('li.todo').should('have.length', 0)
 })
 
 it('starts with zero items', () => {
-  // start Cypress network proxy with cy.server()
+  // start Cypress network server
   // spy on route `GET /todos`
-  //  with cy.route(...).as(<alias name>)
   // THEN visit the page
+  cy.server()
+  cy.route('GET', '/todos').as('todos')
   cy.visit('/')
-  // wait for `GET /todos` route
-  //  using "@<alias name>" string
+  // wait for `GET /todos` response
+  cy.wait('@todos')
+  // second part: inspect the server's response
+  // .its('response.body')
+  // .should('have.length', 0)
   // then check the DOM
   cy.get('li.todo').should('have.length', 0)
-
-  // second part: when spying on the XHR using an alias
-  // confirm that the response was an empty list
 })
 
 it('starts with zero items (stubbed response)', () => {
   // start Cypress network server
-  // stub `GET /todos` with []
-  // save the stub as an alias
-
+  // spy on route `GET /todos`
   // THEN visit the page
+  cy.server()
+  cy.route('GET', '/todos', []).as('todos')
   cy.visit('/')
-
-  // wait for the route alias
-  // grab its response body
-  // and make sure the body is an empty list
+  cy
+    .wait('@todos') // wait for `GET /todos` response
+    // inspect the server's response
+    .its('response.body')
+    .should('have.length', 0)
+  // then check the DOM
+  cy.get('li.todo').should('have.length', 0)
 })
 
 describe('fixtures', () => {
   it('starts with zero items (fixture)', () => {
     // start Cypress network server
-    // stub `GET /todos` with fixture "empty-list"
-
-    // visit the page
+    // stub route `GET /todos`, return data from fixture file
+    // THEN visit the page
+    cy.server()
+    cy.route('GET', '/todos', 'fixture:empty-list').as('todos')
     cy.visit('/')
-
+    cy
+      .wait('@todos') // wait for `GET /todos` response
+      // inspect the server's response
+      .its('response.body')
+      .should('have.length', 0)
     // then check the DOM
     cy.get('li.todo').should('have.length', 0)
   })
 
   it('loads several items from a fixture', () => {
     // start Cypress network server
-    // stub route `GET /todos` with data from a fixture file "two-items.json"
+    // stub route `GET /todos` with data from a fixture file
     // THEN visit the page
+    cy.server()
+    cy.route('GET', '/todos', 'fx:two-items')
     cy.visit('/')
     // then check the DOM: some items should be marked completed
     // we can do this in a variety of ways
+    cy.get('li.todo').should('have.length', 2)
+    cy.get('li.todo.completed').should('have.length', 1)
+    cy
+      .contains('.todo', 'first item from fixture')
+      .should('not.have.class', 'completed')
+      .find('.toggle')
+      .should('not.be.checked')
+    cy
+      .contains('.todo.completed', 'second item from fixture')
+      .find('.toggle')
+      .should('be.checked')
   })
 })
 
 it('posts new item to the server', () => {
-  // start Cypress network server
-  // spy on "POST /todos", save as alias
+  cy.server()
+  cy.route('POST', '/todos').as('new-item')
   cy.visit('/')
   cy.get('.new-todo').type('test api{enter}')
-
-  // wait on XHR call using the alias, grab its request or response body
-  // and make sure it contains
-  // {title: 'test api', completed: false}
-  // hint: use cy.wait(...).its(...).should('have.contain', ...)
+  cy.wait('@new-item').its('request.body').should('have.contain', {
+    title: 'test api',
+    completed: false
+  })
 })
 
 it('posts new item to the server response', () => {
-  // start Cypress network server
-  // spy on "POST /todos", save as alias
+  cy.server()
+  cy.route('POST', '/todos').as('new-item')
   cy.visit('/')
   cy.get('.new-todo').type('test api{enter}')
-
-  // wait on XHR call using its alias, grab its response body
-  // and it should contain the title and the completed "false" object
+  cy.wait('@new-item').its('response.body').should('have.contain', {
+    title: 'test api',
+    completed: false
+  })
 })
