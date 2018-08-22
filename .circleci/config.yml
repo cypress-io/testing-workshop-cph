@@ -48,14 +48,15 @@ jobs:
             - ~/.cache
           key: dependencies-{{ checksum "package.json" }}
 
+      # execute all specs on a single machine, but give the group a name
       - run:
           name: Run Cypress tests
-          command: npm test
+          command: npm test -- --group single
 
   # alternative:
   #   starts the app and runs tests using a single start-server-and-test command
   single-command:
-    # execute 3 copies of this job on CI
+    # execute 3 copies of this job on CI in load balancing mode
     parallelism: 3
 
     docker:
