@@ -14,7 +14,7 @@ it('loads', () => {
 const addItem = text => {
   // write Cy commands here to add the new item
 }
-it('adds two items', () => {
+it.skip('adds two items', () => {
   addItem('first item')
   addItem('second item')
   // fill the selector

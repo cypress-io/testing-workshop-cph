@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+import { resetDatabase } from '../../support/utils'
+
 // note, we are not resetting the server before each test
 // so this test passes without "wait" - but this is WRONG
 it('starts with zero items (waits)', () => {
@@ -8,6 +10,8 @@ it('starts with zero items (waits)', () => {
 })
 
 it('starts with zero items', () => {
+  resetDatabase()
+
   // start Cypress network server
   // spy on route `GET /todos`
   // THEN visit the page

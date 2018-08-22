@@ -1,9 +1,11 @@
 /// <reference types="cypress" />
-// beforeEach(() => {
-//   cy.request('POST', '/reset', {
-//     todos: []
-//   })
-// })
+
+// send HTTP command to the server to clear all todos
+beforeEach(() => {
+  cy.request('POST', '/reset', {
+    todos: []
+  })
+})
 beforeEach(() => {
   cy.visit('/')
 })

@@ -4,7 +4,7 @@
   "description": "End-to-end testing workshop with Cypress at CopenhagenJS",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run --spec 'cypress/integration/07-ci/*'",
+    "test": "cypress run",
     "posttest": "cd todomvc; npm run reset:db",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
