@@ -18,9 +18,9 @@ jobs:
       # Download and cache dependencies for the app and for tests
       - restore_cache:
           keys:
-          - dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - dependencies-
+            - dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-
 
       # Install NPM dependencies quickly using "npm ci"
       # https://on.cypress.io/continuous-integration
@@ -55,6 +55,9 @@ jobs:
   # alternative:
   #   starts the app and runs tests using a single start-server-and-test command
   single-command:
+    # execute 3 copies of this job on CI
+    parallelism: 3
+
     docker:
       # find Docker image at https://github.com/cypress-io/cypress-docker-images
       - image: cypress/base:8
@@ -67,9 +70,9 @@ jobs:
       # Download and cache dependencies for the app and for tests
       - restore_cache:
           keys:
-          - dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - dependencies-
+            - dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-
 
       # Install NPM dependencies quickly
       - run:

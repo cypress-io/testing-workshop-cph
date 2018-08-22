@@ -9,7 +9,8 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "start": "cd todomvc; npm start -- --quiet",
-    "ci": "start-test 3000",
+    "ci": "start-test 3000 record",
+    "record": "cypress run --record --parallel",
     "basic": "cypress run --spec 'cypress/integration/01-basic/spec.js'",
     "postinstall": "cd todomvc; npm install",
     "issues": "git-issues"
