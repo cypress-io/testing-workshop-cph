@@ -104,3 +104,10 @@ it('posts new item to the server response', () => {
     completed: false
   })
 })
+
+it('posts item via API', () => {
+  resetDatabase()
+  cy.request('POST', '/todos', { completed: false, title: 'my test', id: '1' })
+  cy.visit('/')
+  cy.contains('li.todo', 'my test')
+})
