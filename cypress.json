@@ -3,5 +3,6 @@
   "viewportHeight": 800,
   "ignoreTestFiles": "answer.js",
   "baseUrl": "http://localhost:3000",
-  "projectId": "gz2b64"
+  "projectId": "gz2b64",
+  "darkMediaQuery": true
 }

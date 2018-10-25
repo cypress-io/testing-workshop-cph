@@ -5,6 +5,16 @@
   <meta charset="utf-8">
   <title>Vue.js • TodoMVC</title>
   <link rel="stylesheet" href="vendor/index.css">
+  <!-- <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="vendor/dark.css"> -->
+  <script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      const link = document.createElement("link")
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = 'vendor/dark.css';
+      document.head.appendChild(link)
+    }
+  </script>
   <style>
     [v-cloak] {
       display: none;

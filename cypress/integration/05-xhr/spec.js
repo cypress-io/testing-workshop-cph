@@ -119,7 +119,9 @@ it('handles 404 when loading todos', () => {
   cy.route({
     url: '/todos',
     response: 'test does not allow it',
-    status: 404
+    status: 404,
+    // pro tip: add delay (ms)
+    delay: 0
   })
   cy.visit('/', {
     // spy on console.error because we expect app would
